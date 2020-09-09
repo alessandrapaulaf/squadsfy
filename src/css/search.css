@@ -1,0 +1,17 @@
+#button {
+    background-color: #B31010;
+    border-color: #B31010;
+}
+
+#button:hover {
+    background-color: #121212;
+    border-color: #121212;
+}
+
+a {
+    color: #B3B3B3;
+}
+
+a:hover {
+    color: #B31010;
+}
