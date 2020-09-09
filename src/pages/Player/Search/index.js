@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Form, Button } from 'react-bootstrap';
-import './../../../css/search.css';
+import './search.css';
 
 function Search(props) {
     const [ album, setAlbum ] = useState({});
@@ -55,8 +54,8 @@ function Search(props) {
 
 
     return (
-        <Tabs defaultActiveKey="artista" >
-            <Tab eventKey="artista" title="Artista">
+        <div>
+            {/* <Tab eventKey="artista" title="Artista">
                 <Form >
                     <Form.Group>
                         <Form.Label style={{margin: "20px"}}>Buscar por artista</Form.Label>
@@ -73,8 +72,8 @@ function Search(props) {
                     </Form.Group>
                     <Button id="button" onClick={handleSearchAlbum}>Buscar</Button>
                 </Form> 
-            </Tab>
-        </Tabs>
+            </Tab> */}
+        </div>
     );
 }
 

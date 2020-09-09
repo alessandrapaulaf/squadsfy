@@ -1,6 +1,5 @@
 import React from 'react';
-import './css/App.css';
-import Rotas from './componentes/Rotas';
+import Rotas from './components/Rotas';
 
 function App() {
   return (
