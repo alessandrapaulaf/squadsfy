@@ -3,8 +3,6 @@
 
 Desenvolvida com ReactJs, realizei o desafio 1 e 2 onde deveria ser consumida API do Last.fm, salvando as buscas num histórico e que fosse possível realizar o login e logout utilizando React Redux.
 
-![](../header.png)
-
 ## Instalação
 
 Na pasta _squadsfy_ Execute o comando abaixo para instalar os pacotes:
@@ -21,6 +19,6 @@ Após a instalação, execute o seguinte comando para iniciar o servidor:
 npm start
 ```
 
-## Meta
+## Sobre
 
 Alessandra – alessandra.paulafrancisco@gmail.com
