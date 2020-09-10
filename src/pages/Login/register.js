@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Content from '../../components/Content';
+import { GiMusicSpell } from 'react-icons/gi';
 
 const Register = () => {
   const [usuario, setusuario] = useState("");
@@ -25,24 +26,24 @@ const Register = () => {
     refresh(newUsuario);
   }
 
-  async function refresh(user){
+  async function refresh(user) {
     dispatch(setUser(user));
     dispatch(setAuth(true));
     history.push('/home');
     window.location.reload();
   }
 
-  function validarUsuario(){
+  function validarUsuario() {
     let users = localStorage.getItem('@squadsFy/users');
 
-    if (users == null){
+    if (users == null) {
       users = [];
     } else {
       users = JSON.parse(users);
     }
-      
 
-    if (users.find(u => u.username === usuario)){
+
+    if (users.find(u => u.username === usuario)) {
       return alert("Já existe um cadastro com esse usuário");
     } else {
       register(users);
@@ -51,24 +52,27 @@ const Register = () => {
 
 
   return (
-    <div style={{padding: '200px 0'}}>
+    <div style={{ padding: '100px 0' }}>
       <Content>
-        <div>
-
+        <div className="logo" style={{ color: '#B31010' }}>
+          <GiMusicSpell size={90} />
         </div>
+        <div className="enterprise">
+          SquadsFy
+          </div>
         <form>
           <div>
-            <Input type="text" placeholder="Digite seu nome" onChange={event => setNome(event.target.value)}/>
+            <Input type="text" placeholder="Digite seu nome" onChange={event => setNome(event.target.value)} />
           </div>
           <div>
-            <Input type="text" placeholder="Defina um usuário" onChange={event => setusuario(event.target.value)}/>
+            <Input type="text" placeholder="Defina um usuário" onChange={event => setusuario(event.target.value)} />
           </div>
           <div>
-            <Input type="password" placeholder="Crie uma senha" onChange={event => setSenha(event.target.value)}/>
+            <Input type="password" placeholder="Crie uma senha" onChange={event => setSenha(event.target.value)} />
           </div>
-          <Button onClick={validarUsuario} label="Cadastro"/>
+          <Button onClick={validarUsuario} label="Cadastro" />
         </form>
-        <p>Já tem cadastro?<Link to="/login"> Faça o login</Link></p>
+        <p>Já tem cadastro?<Link style={{ color: "#B31010" }} to="/login"> Faça o login</Link></p>
       </Content>
     </div>
   );

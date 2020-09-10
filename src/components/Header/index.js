@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import './header.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setAuth } from '../../services/reducers/auth';
@@ -18,21 +18,23 @@ function Header(props) {
   return (
     <div>
       <header>
-        <div>
-          <nav className="mr-auto">
-            {
-              local === "/historico" &&
-              <Link to="/home">Home</Link>
-            }
-            {
-              local === "/home" &&
-              <Link to="/historico">Historico</Link>
-            }
-            <div onClick={logoff}>Sair</div>
-          </nav>
-        </div>
+        <nav>
+          <div class="container">
+            <ul className="left">
+              {
+                local === "/historico" &&
+                <li><Link to="/" ><span className="home"></span> Home</Link></li>
+              }
+              {
+                (local === "/home" || local === "/") &&
+                <li><Link to="/historico"><span className="historico"></span> Historico</Link></li>
+              }
+              <li><span onClick={logoff}>Sair</span></li>
+            </ul>
+          </div>
+        </nav>
       </header>
-      {props.children}
+      { props.children }
     </div>
   );
 }

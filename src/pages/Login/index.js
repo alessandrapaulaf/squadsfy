@@ -6,6 +6,7 @@ import history from '../../services/history';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Content from '../../components/Content';
+import { GiMusicSpell } from 'react-icons/gi';
 
 const Login = () => {
   const [usuario, setusuario] = useState("");
@@ -39,10 +40,13 @@ const Login = () => {
 
   return (
     <div>
-      <div style={{padding: '200px 0'}}>
+      <div style={{padding: '100px 0'}}>
         <Content>
-          <div>
-            
+          <div className="logo" style={{color: '#B31010'}}>
+            <GiMusicSpell size={90}/>
+          </div>
+          <div className="enterprise">
+            SquadsFy
           </div>
           <form>
             <div>
@@ -53,7 +57,7 @@ const Login = () => {
             </div>
             <Button onClick={login} label="Login"/>
           </form>
-          <p>Não tem login?<Link to="/register"> Cadastre-se</Link></p>
+          <p>Não tem login?<Link style={{color: "#B31010"}} to="/register"> Cadastre-se</Link></p>
         </Content>
       </div>
     </div>

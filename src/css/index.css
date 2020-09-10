@@ -4,13 +4,16 @@ body {
   text-decoration-color: #B3B3B3;
   overflow-x: hidden;
   text-align: center;
-}
-
-header {
-  background-color: #000000 ;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2, p, span, td, th, label {
-  color: #B3B3B3;
+  color: #fff;
+}
+
+.enterprise {
+  font-family: 'Modak', cursive;
+  color: #fff;
+  font-size: 60px;
 }
 

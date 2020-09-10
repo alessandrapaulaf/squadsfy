@@ -26,20 +26,21 @@ function Player() {
 
   return (
     <Header>
-      <div>
-        <div md={6}>
-          <div className="player">
-            <Search
-              found={(values) => changeValues(values)} />
+      <div className="flex-box">
+        <div className="content-box">
+          <div className="page-right">
+            <div>
+              <Search
+                found={(values) => changeValues(values)} />
+            </div>
           </div>
-        </div>
-        <div md={6}>
-          <div>
-            <h1>{title}</h1>
-            {
-              topArtistas.length &&
-              <List values={foundValues.length > 0 ? foundValues : topArtistas} tipo={title} />
-            }
+          <div className="page-left">
+            <div>
+              {
+                topArtistas.length &&
+                <List values={foundValues.length > 0 ? foundValues : topArtistas} title={title} />
+              }
+            </div>
           </div>
         </div>
       </div>

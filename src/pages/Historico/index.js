@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
+import './historico.css';
 
 const Historico = () => {
   const [buscas, setBuscas] = useState([]);
@@ -18,28 +19,30 @@ const Historico = () => {
       {
         buscas.length > 0
         ?
-        <table hover className="historico">
-          <thead>
-            <tr>
-              <th>Nome buscado</th>
-              <th>Data da busca</th>
-              <th>Tipo</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              buscas.map((busca) => {
-                return (
-                  <tr>
-                    <td>{busca.value}</td>
-                    <td>{busca.data}</td>
-                    <td>{busca.tipo}</td>
-                  </tr>
-                );
-              })
-            }
-          </tbody>
-        </table>
+        <div>
+          <table className="history">
+            <thead>
+              <tr>
+                <th>Nome buscado</th>
+                <th>Data da busca</th>
+                <th>Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                buscas.map((busca) => {
+                  return (
+                    <tr>
+                      <td>{busca.value}</td>
+                      <td>{busca.data}</td>
+                      <td>{busca.tipo}</td>
+                    </tr>
+                  );
+                })
+              }
+            </tbody>
+          </table>
+        </div>
         :
         <h1>Nenhuma busca realizada.</h1>
       }

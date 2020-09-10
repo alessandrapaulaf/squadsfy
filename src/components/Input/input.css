@@ -1,12 +1,12 @@
 input {
-    background-color: #B3B3B3;
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    width: 100%;
-    border: 0;
-    border-radius: 10px;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
+  background-color: #B3B3B3;
+  font-family: 'Montserrat', sans-serif;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
 }

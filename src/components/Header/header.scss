@@ -1,0 +1,35 @@
+nav {
+    padding: 20px 0 40px 0;
+    background: #000000;
+    font-size: 16px;
+
+    
+    .left {
+      float: left;
+    }
+    
+    .right {
+      float: right;
+    }
+    ul {
+      
+      li {
+        display: inline;
+        padding-left: 20px;
+        a, span {
+          color: #EFEDEF;
+          text-decoration: none;
+          
+          &:hover {
+            color: #B31010;
+          }
+        }
+      }
+    }
+  }
+  
+
+  .container {
+    margin: auto;
+    width: 100%;
+  }

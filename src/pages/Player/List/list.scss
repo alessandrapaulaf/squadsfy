@@ -1,0 +1,33 @@
+tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.rwd-table {
+  background: #B31010;
+  color: #EFEDEF;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    padding: 1em !important; 
+  }
+  th, td:before {
+    color: #121212;
+  }
+}
+
+.list h1 {
+  text-align: center;
+}
+
+.list table {
+  display: block;
+}
+
+.list {
+  max-width: 400px;
+}
