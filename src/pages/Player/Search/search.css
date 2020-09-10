@@ -8,10 +8,12 @@
     border-color: #121212;
 }
 
-a {
+a:hover {
     color: #B3B3B3;
 }
 
-a:hover {
+a {
     color: #B31010;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
 }

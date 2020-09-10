@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { setUser, setAuth } from '../../services/reducers/auth';
 import history from '../../services/history';
 import Input from '../../components/Input';
+import Button from '../../components/Button';
+import Content from '../../components/Content';
 
 const Login = () => {
   const [usuario, setusuario] = useState("");
@@ -37,19 +39,23 @@ const Login = () => {
 
   return (
     <div>
-      <div>
-
+      <div style={{padding: '200px 0'}}>
+        <Content>
+          <div>
+            
+          </div>
+          <form>
+            <div>
+              <Input type="text" placeholder="Usuário" onChange={event => setusuario(event.target.value)}/>
+            </div>
+            <div>
+              <Input type="password" placeholder="Senha" onChange={event => setSenha(event.target.value)}/>
+            </div>
+            <Button onClick={login} label="Login"/>
+          </form>
+          <p>Não tem login?<Link to="/register"> Cadastre-se</Link></p>
+        </Content>
       </div>
-      <form>
-        <div>
-          <Input type="text" label="Usuário" placeholder="Entre com seu usuario" onChange={event => setusuario(event.target.value)}/>
-        </div>
-        <div>
-          <Input type="password" label="Senha" onChange={event => setSenha(event.target.value)}/>
-        </div>
-        <button onClick={login}>Login</button>
-      </form>
-      <Link to="/register">Não tem login? Cadastre-se</Link>
     </div>
   );
 }

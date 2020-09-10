@@ -3,8 +3,7 @@ import './input.css';
 
 const Input = (props) => {
   return (
-    <div className="input-group">
-      <label>{props.label}</label>
+    <div>
       <input onChange={props.onChange} placeholder={props.placeholder} type={props.type}></input>
     </div>
   );
